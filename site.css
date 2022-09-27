@@ -4,13 +4,16 @@
   box-sizing: border-box;
 }
 
+.form-control {
+  width: 400%;
+}
 body {
   margin: 12px;
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;
   color: white;
   height: 100%;
-  background: linear-gradient(to bottom, rgb(43,50,178) 0%, rgb(20,136,204) 100%);
+  background: linear-gradient(to bottom, rgb(191, 193, 245) 0%, rgb(159, 202, 228) 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
@@ -238,3 +241,4 @@ body {
     order: -1;
   }
 }
+

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "axios": "^0.27.2"
+  }
+}
