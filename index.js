@@ -29,6 +29,7 @@ debugger
 let = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=bfa7f5b0eb7df00adfe62646c38d0455
 `)
 .then((response)=>{
+  debugger
   console.log(response)
   disPlaY();
 }
