@@ -24,23 +24,27 @@ secondDate.innerText = `${dateObj.getDate() + 2}/${dateObj.getMonth()}`
 thirdDate.innerText = `${dateObj.getDate() + 3}/${dateObj.getMonth()}`
 fourthDate.innerText = `${dateObj.getDate() + 4}/${dateObj.getMonth()}`
 fifthDate.innerText = `${dateObj.getDate() + 5}/${dateObj.getMonth()}`
-btnn.addEventListener('click', function(){
-debugger
-let = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=bfa7f5b0eb7df00adfe62646c38d0455
-`)
-.then((response)=>{
-  debugger
-  console.log(response)
-  disPlaY();
-}
- )
-.catch(response => {
-    let {cod } = response.response.data;
-   if(cod === '404'){
-    alert('City does not exit.')
-   }
-   console.log(data)
-})
+
+  function displayData(){
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=bfa7f5b0eb7df00adfe62646c38d0455
+    `)
+    .then((response)=>{
+      debugger
+      console.log(response)
+      disPlaY(response);
+    }
+     )
+    .catch(response => {
+        let {cod } = response.response.data;
+       if(cod === '404'){
+        alert('City does not exit.')
+       }
+       console.log(data)
+    })
+    }
+btnn.addEventListener('click', displayData)
+inputValue.addEventListener('keyup', (e)=>{
+ if(e.key === "Enter") displayData()
 })
 
 function disPlaY(response){
@@ -59,3 +63,5 @@ function disPlaY(response){
   humidity.innerText = `${response.data.main.humidity}%`;
   pressure.innerText = `${response.data.main.pressure}mb`;
 }
+ 
+
