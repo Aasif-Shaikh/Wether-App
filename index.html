@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,4 +309,316 @@ axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}
 <script src="./index.js"></script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+  <link href="site.css" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/c3105ca38a.js" crossorigin="anonymous"></script>
+
+    <!-- Google fonts link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="./index.js"></script>
+</head>
+<body>
+ <!--  <script>
+    var inputValue = document.querySelector('.form-control');
+    var btnn = document.querySelector('.btn');
+    var curTempValue = document.querySelector('.current-temperature__value');
+
+btnn.addEventListener('click', function(){
+debugger
+axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue.value}&appid=bfa7f5b0eb7df00adfe62646c38d0455
+`)
+.then((response)=>{
+  debugger
+  curTempValue.innerText = `${response.data.main.temp}`
+})
+.catch(err => console.log(err))
+
+})
+  </script> -->
+
+<main class="main-container">
+  <div class="input-group">
+    <div class="form-outline">
+      <div class="input-group mb-3" style="width: 315%;">
+        <input type="text" class="form-control" placeholder="Enter your location" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-primary " id="btn" type="button">Button</button>
+        </div>
+      </div>
+ <!--      <input type="search" id="form1" class="form-control" style="width: 400%;">
+      <button type="button" class="btn btn-success" id = "btn"style="margin-right: 100%;"><i class="fa-solid fa-magnifying-glass"></i></button></input> -->
+    </div>
+  </div>
+  <div class="location-and-date">
+    <h1 class="location-and-date__location location-country">London, UK</h1>
+    <div class="date">Sunday 4th August</div>
+  </div>
+
+
+  <div class="current-temperature">
+    <div class="current-temperature__icon-container">
+      <img src="icons/mostly-sunny.svg" class="current-temperature__icon" alt="">
+    </div>
+    <div class="current-temperature__content-container">
+      <div class="current-temperature__value">21&deg;</div>
+      <div class="current-temperature__summary">mostly-sunny</div><br>
+      <div><h6 style="color: white;">Feels Like  <span class="feels">22&deg;</span></h6></div>
+    </div>
+  </div>
+
+
+  <div class="current-stats">
+    <div>
+      <div class="current-stats__value high">23&deg;</div>
+      <div class="current-stats__label">High</div>
+      <div class="current-stats__value low">14&deg;</div>
+      <div class="current-stats__label">Low</div>
+    </div>
+    <div>
+      <div class="current-stats__value wind-speed">7mph</div>
+      <div class="current-stats__label">Wind</div>
+      <div class="current-stats__value">0%</div>
+      <div class="current-stats__label">Rain</div>
+    </div>
+    <div>
+      <div class="current-stats__value humidity">85%</div>
+      <div class="current-stats__label">Humidity</div>
+      <div class="current-stats__value pressure">1006mb</div>
+      <div class="current-stats__label">Pressure</div>
+    </div>
+  </div>
+
+  <div class="weather-by-hour">
+    <h2 class="weather-by-hour__heading">Today's weather</h2>
+    <div class="weather-by-hour__container">
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">3am</div>
+        <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        <div>14&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">6am</div>
+        <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        <div>16&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">9am</div>
+        <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        <div>17&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">12pm</div>
+        <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        <div>19&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">3pm</div>
+        <img src="icons/sunny.svg" alt="Sunny">
+        <div>21&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">6pm</div>
+        <img src="icons/sunny.svg" alt="Sunny">
+        <div>20&deg;</div>
+      </div>
+      <div class="weather-by-hour__item">
+        <div class="weather-by-hour__hour">9pm</div>
+        <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        <div>18&deg;</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="next-5-days">
+    <h2 class="next-5-days__heading">Next 5 days</h2>
+    <div class="next-5-days__container">
+
+      <div class="next-5-days__row">
+
+        <div class="next-5-days__date">
+          Tomorrow
+          <div class="next-5-days__label first_date">22/9</div>
+        </div>
+
+        <div class="next-5-days__low">
+          10&deg;
+          <div class="next-5-days__label">Low</div>
+        </div>
+
+        <div class="next-5-days__high">
+          21&deg;
+          <div class="next-5-days__label">High</div>
+        </div>
+
+        <div class="next-5-days__icon">
+          <img src="icons/sunny.svg" alt="Sunny">
+        </div>
+
+        <div class="next-5-days__rain">
+          0%
+          <div class="next-5-days__label">Rain</div>
+        </div>
+
+        <div class="next-5-days__wind">
+          12mph
+          <div class="next-5-days__label">Wind</div>
+        </div>
+
+      </div>
+      <div class="next-5-days__row">
+
+        <div class="next-5-days__date">
+          Friday
+          <div class="next-5-days__label second_date">31/7</div>
+        </div>
+
+        <div class="next-5-days__low">
+          9&deg;
+          <div class="next-5-days__label">Low</div>
+        </div>
+
+        <div class="next-5-days__high">
+          18&deg;
+          <div class="next-5-days__label">High</div>
+        </div>
+
+        <div class="next-5-days__icon">
+          <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        </div>
+
+        <div class="next-5-days__rain">
+          3%
+          <div class="next-5-days__label">Rain</div>
+        </div>
+
+        <div class="next-5-days__wind">
+          7mph
+          <div class="next-5-days__label">Wind</div>
+        </div>
+
+      </div>
+      <div class="next-5-days__row">
+
+        <div class="next-5-days__date">
+          Thursday
+          <div class="next-5-days__label third_date">1/8</div>
+        </div>
+
+        <div class="next-5-days__low">
+          7&deg;
+          <div class="next-5-days__label">Low</div>
+        </div>
+
+        <div class="next-5-days__high">
+          15&deg;
+          <div class="next-5-days__label">High</div>
+        </div>
+
+        <div class="next-5-days__icon">
+          <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        </div>
+
+        <div class="next-5-days__rain">
+          75%
+          <div class="next-5-days__label">Rain</div>
+        </div>
+
+        <div class="next-5-days__wind">
+          11mph
+          <div class="next-5-days__label">Wind</div>
+        </div>
+
+      </div>
+      <div class="next-5-days__row">
+
+        <div class="next-5-days__date">
+          Saturday
+          <div class="next-5-days__label fourth-date">2/8</div>
+        </div>
+
+        <div class="next-5-days__low">
+          12&deg;
+          <div class="next-5-days__label">Low</div>
+        </div>
+
+        <div class="next-5-days__high">
+          24&deg;
+          <div class="next-5-days__label">High</div>
+        </div>
+
+        <div class="next-5-days__icon">
+          <img src="icons/sunny.svg" alt="Sunny">
+        </div>
+
+        <div class="next-5-days__rain">
+          2%
+          <div class="next-5-days__label">Rain</div>
+        </div>
+
+        <div class="next-5-days__wind">
+          8mph
+          <div class="next-5-days__label">Wind</div>
+        </div>
+
+      </div>
+      <div class="next-5-days__row">
+
+        <div class="next-5-days__date">
+          Sunday
+          <div class="next-5-days__label fifth_date">30/7</div>
+        </div>
+
+        <div class="next-5-days__low">
+          10&deg;
+          <div class="next-5-days__label">Low</div>
+        </div>
+
+        <div class="next-5-days__high">
+          21&deg;
+          <div class="next-5-days__label">High</div>
+        </div>
+
+        <div class="next-5-days__icon">
+          <img src="icons/mostly-sunny.svg" alt="Mostly sunny">
+        </div>
+
+        <div class="next-5-days__rain">
+          0%
+          <div class="next-5-days__label">Rain</div>
+        </div>
+
+        <div class="next-5-days__wind">
+          12mph
+          <div class="next-5-days__label">Wind</div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+<script src="./index.js"></script>
+
+</body>
+>>>>>>> cfc030e0a926cc3d48a97952205b0f1ff26f8163
 </html>
